@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import SearchAyah from "./components/home/SearchAyah";
 import { useState } from "react";
+import Concern from "./Concern";
 
 export default function Home() {
   const [dontshow, setDontShow] = useState(false);
@@ -43,7 +44,10 @@ export default function Home() {
       </section>
 
       {/* Features section */}
-      <SearchAyah handleShow={handleShow}/>
+      <div className="flex flex-col gap-20">
+        <Concern/>
+        <SearchAyah handleShow={handleShow}/>
+      </div>
     </main>
   );
 }
