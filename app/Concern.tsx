@@ -44,10 +44,10 @@ function Concern() {
       >
         Solution for your concern.
       </h1>
-      <div className='w-full flex justify-center items-center mt-4 flex-col md:flex-row gap-2 '>
+      <div className='w-full flex justify-center items-center mt-4 flex-col md:flex-row gap-2  '>
         <input
             type="text"
-            className='border border-slate-400 rounded-md py-2 px-4 w-96'
+            className='border focus:outline-sky-500 focus:shadow-sky-300/90  rounded-md py-2 px-4 w-96 shadow-lg shadow-sky-300/40'
             placeholder={`${placeholder}`}
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
@@ -58,7 +58,7 @@ function Concern() {
         <button 
         disabled={loading}
         onClick={handleSearch} 
-        className='bg-sky-400 cursor-pointer  text-white px-4 py-2 rounded-md hover:bg-sky-500 active:bg-sky-600 transition duration-300'>{loading?'Searching...':'Search'}</button>
+        className={`bg-sky-400 cursor-pointer  shadow-lg  text-white px-4 py-2 rounded-md hover:bg-sky-500 active:bg-sky-600 transition duration-300 ${loading?"shadow-sky-500/90":"shadow-sky-500/60"}`}>{loading?'Searching...':'Search'}</button>
       </div>
       <div className='w-full grid place-items-center text-xs text-slate-400 '>
         <p className=''><span className='text-red-500'>- </span>Powred by <span className='text-sky-400'>Gemini.</span></p>
